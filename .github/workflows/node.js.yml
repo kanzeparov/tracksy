@@ -40,7 +40,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          cd ~/tracksy/server
-          git pull origin master
+          cd ~/tracksy
+          git pull
           npm install --production
           pm2 restart index
