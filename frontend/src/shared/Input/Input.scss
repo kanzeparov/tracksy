@@ -1,0 +1,24 @@
+.input-field {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  &__label {
+    color: #a0a0a0;
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+  &__input {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  &__error {
+    color: #ff0000;
+    display: inline-block;
+    min-height: 14px;
+    margin: 3px 0;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
