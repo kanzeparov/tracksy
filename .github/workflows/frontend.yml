@@ -1,0 +1,45 @@
+name: React Github CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install and test
+      run: |
+        npm install
+        npm run test
+      env:
+        CI: true
+
+  deploy:
+    needs: [test]
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: SSH and deploy react app
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST_2 }}
+        username: ${{ secrets.SSH_USERNAME_2 }}
+        key: ${{ secrets.SSH_KEY_2 }}
+        script: |
+          cd ~/tracksy
+          git pull
+          npm install --production
+          npm run build
