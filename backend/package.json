@@ -4,12 +4,15 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha backend/server/test/* --exit"
+    "test": "node_modules/.bin/mocha backend/server/test/* --exit",
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "firebase-admin": "^9.8.0",
+    "nodemon": "^2.0.7"
   },
   "devDependencies": {
     "moch": "0.0.1",

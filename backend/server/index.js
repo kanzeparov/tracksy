@@ -1,16 +1,15 @@
 // importing express framework
 const express = require("express");
-
 const app = express();
-
-// Respond with "hello world" for requests that hit our root "/"
-app.get("/", function (req, res) {
-    return res.send("Hello world");
-});
+const router= require('./routes/index')
+// middlewares
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(router)
 
 // listen to port 7000 by default
 app.listen(process.env.PORT || 7000, () => {
-    console.log("Server is running");
+    console.log(`Server is running at por1t ${7000}}`);
 });
 
 module.exports = app;
