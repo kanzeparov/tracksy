@@ -39,7 +39,7 @@ jobs:
         username: ${{ secrets.SSH_USERNAME_2 }}
         key: ${{ secrets.SSH_KEY_2 }}
         script: |
-          cd ~/tracksy
+          cd ~/tracksy/frontend
           git pull
           npm install --production
           npm run build
