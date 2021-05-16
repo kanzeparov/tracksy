@@ -37,8 +37,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: SSH and deploy node app
       working-directory: ./backend
+    - name: SSH and deploy node app
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}

@@ -35,8 +35,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: SSH and deploy react app
       working-directory: ./frontend
+    - name: SSH and deploy react app
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST_2 }}
