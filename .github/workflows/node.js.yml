@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "backend/**"
+
+
 
 jobs:
   test:
@@ -22,6 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install and test
       run: |
+        cd backend/
         npm install
         npm run test
       env:
@@ -33,13 +38,13 @@ jobs:
 
     steps:
     - name: SSH and deploy node app
+      working-directory: ./backend
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          cd ~/tracksy/backend
           git pull
           npm install --production
           pm2 restart index

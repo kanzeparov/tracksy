@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "frontend/**"
 
 jobs:
   test:
@@ -22,6 +24,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install and test
       run: |
+        cd frontend/
         npm install
         npm run test
       env:
@@ -33,13 +36,13 @@ jobs:
 
     steps:
     - name: SSH and deploy react app
+      working-directory: ./frontend
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST_2 }}
         username: ${{ secrets.SSH_USERNAME_2 }}
         key: ${{ secrets.SSH_KEY_2 }}
         script: |
-          cd ~/tracksy/frontend
           git pull
           npm install --production
           npm run build
