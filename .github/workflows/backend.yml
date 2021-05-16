@@ -9,7 +9,7 @@ on:
       - ".github/workflows/backend.yml"
   pull-requests:
     branches:
-      - *
+      - "*"
 
 
 
