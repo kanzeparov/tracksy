@@ -1,4 +1,4 @@
-name: React Github CI
+name: Frontend Github CI
 
 on:
   push:
@@ -35,8 +35,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      working-directory: ./frontend
-    - name: SSH and deploy react app
+    - name: SSH and deploy frontend app
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST_2 }}
