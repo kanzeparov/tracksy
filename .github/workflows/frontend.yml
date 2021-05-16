@@ -12,7 +12,7 @@ on:
       - "*"
     paths:
       - "backend/**"
-      - ".github/workflows/backend.yml"
+      - ".github/workflows/frontend.yml"
 
 jobs:
   test:
