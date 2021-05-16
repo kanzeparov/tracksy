@@ -1,7 +1,7 @@
 // importing express framework
 const express = require("express");
 const app = express();
-const router= require('./routes/index')
+const router= require('./routes')
 // middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
