@@ -1,4 +1,4 @@
-name: Node Github CI
+name: Backend Github CI
 
 on:
   push:
@@ -6,6 +6,10 @@ on:
       - main
     paths:
       - "backend/**"
+      - ".github/workflows/backend.yml"
+  pull_request:
+    branches:
+      - "*"
 
 
 
@@ -37,8 +41,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      working-directory: ./backend
-    - name: SSH and deploy node app
+    - name: SSH and deploy backend app
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
