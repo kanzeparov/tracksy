@@ -9,7 +9,7 @@ app.use(router)
 
 // listen to port 7000 by default
 app.listen(process.env.PORT || 7000, () => {
-    console.log(`Server is running at por1t ${7000}}`);
+    console.log(`Server is running at port ${7000}}`);
 });
 
 module.exports = app;
