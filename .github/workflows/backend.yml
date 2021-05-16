@@ -7,7 +7,7 @@ on:
     paths:
       - "backend/**"
       - ".github/workflows/backend.yml"
-  pull-requests:
+  pull-request:
     branches:
       - "*"
 
