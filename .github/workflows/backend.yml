@@ -51,6 +51,7 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         script: |
+          cd backend/
           git pull
           npm install --production
           pm2 restart index
