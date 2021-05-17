@@ -49,7 +49,7 @@ jobs:
         username: ${{ secrets.SSH_USERNAME_2 }}
         key: ${{ secrets.SSH_KEY_2 }}
         script: |
-          cd frontend/
           git pull
+          cd frontend/
           npm install --production
           npm run build
