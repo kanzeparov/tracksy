@@ -1,5 +1,9 @@
 const fetchApi = async ({
-  BASE_URL, path = '', method = 'GET', body = null, credentials = 'include',
+  BASE_URL = 'http://167.172.37.164:7000',
+  path = '',
+  method = 'GET',
+  body = null,
+  credentials = 'include',
 }) => {
   const res = await fetch(`${BASE_URL}/${path}`, {
     method,

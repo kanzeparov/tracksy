@@ -50,5 +50,6 @@ jobs:
         key: ${{ secrets.SSH_KEY_2 }}
         script: |
           git pull
+          cd frontend/
           npm install --production
           npm run build

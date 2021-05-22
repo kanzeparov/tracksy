@@ -1,7 +1,7 @@
 export const setIsloggedIn = (isLoggedIn) => {
-  return { type: 'SET_IS_LOGGED_IN', payload: isLoggedIn };
+  return { type: 'set-is-logged-in', payload: isLoggedIn };
 };
 
 export const setCurrentUser = (user) => {
-  return { type: 'SET_CURRENT_USER', payload: user };
+  return { type: 'set-current-user', payload: user };
 };
