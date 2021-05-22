@@ -7,25 +7,29 @@ import Register from '../../pages/Register';
 import Login from '../../pages/Login';
 import Profile from '../../pages/Profile';
 import ProtectedRoute from '../../shared/ProtectedRoute';
-import { setIsloggedIn, setCurrentUser } from '../../actions/userActions';
+import { setCurrentUser } from '../../actions/userActions';
+import { register, login } from '../../actions/authActions';
 
 const Main = () => {
-  const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const dispatch = useDispatch();
 
-  const handleLogin = (userData) => {
-    // example name, delete this code later
-    if (!userData.name) {
-      userData = { ...userData, name: 'Bro' }; //eslint-disable-line
+  const handleLogin = async (userData) => {
+    try {
+      await dispatch(login(userData));
+      dispatch(setCurrentUser(userData));
+    } catch (err) {
+      console.log('at login', err);
     }
-    // здесь будет логика входа
-    dispatch(setIsloggedIn(true));
-    dispatch(setCurrentUser(userData));
   };
 
-  const handleRegister = (userData) => {
-    // здесь будет логика регистрации, после чего производится авто-вход
-    handleLogin(userData);
+  const handleRegister = async (userData) => {
+    try {
+      await dispatch(register(userData));
+      handleLogin(userData);
+    } catch (err) {
+      console.log('at register', err);
+    }
   };
 
   return (
