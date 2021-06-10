@@ -1,0 +1,40 @@
+.home {
+  display: flex;
+}
+.home__navigation {
+  width: 15vw;
+  height: 100vh;
+  margin-right: 60px;
+  background-color: rgb(56, 151, 128);
+  display: flex;
+  justify-content: center;
+}
+.home__content {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  width: 75vw;
+  height: 100vh;
+}
+.home__title {
+  color: white;
+  margin: 0 0 20px;
+}
+.home__title_color_black {
+  color: black;
+}
+.home__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+}
+.home__list-item {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: rgb(241, 219, 219);
+}

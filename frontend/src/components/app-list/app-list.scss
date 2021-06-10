@@ -1,0 +1,36 @@
+.applications {
+  display: grid;
+  grid-gap: 20px;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(3, 250px);
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid;
+  padding: 10px;
+}
+
+.card__header{
+  display: flex;
+  align-items: center;
+}
+
+.card__image{
+  width: 90px;
+}
+
+.card__button{
+  width: 200px;
+  border-radius: 20px;
+  background-color: rgb(218, 213, 213);
+  border: none;
+  height: 50px;
+  margin: 0 auto;
+}
+.card__button:hover{
+  color: white;
+  background-color: rgb(92, 62, 62);
+}
