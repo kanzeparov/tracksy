@@ -1,11 +1,14 @@
+.login-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .service-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
-}
-.service-popup {
-  max-width: 400px;
 }
 
 .image {

@@ -13,7 +13,7 @@ function ApplicationDetails() {
           src={currentService?.image}
           alt={currentService?.title}
         />
-        <h3 className="title">{currentService?.title}</h3>
+        <h3 className="service-popup__header-title">{currentService?.title}</h3>
       </div>
       <div className="service-popup__body">
         <p className="paragraph paragraph_service_about">

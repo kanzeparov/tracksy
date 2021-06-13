@@ -12,8 +12,8 @@
 .home__content {
   display: flex;
   flex-direction: column;
-  justify-content:center;
-  width: 75vw;
+  justify-content: center;
+  width: 1300px;
   height: 100vh;
 }
 .home__title {
@@ -29,7 +29,7 @@
   list-style: none;
   display: flex;
   justify-content: center;
-  flex-direction:column;
+  flex-direction: column;
 }
 .home__list-item {
   position: relative;
@@ -37,4 +37,16 @@
   display: flex;
   align-items: center;
   color: rgb(241, 219, 219);
+}
+
+.button_type_login {
+  width: 250px;
+  height: 35px;
+  background: rgb(206, 191, 191);
+  margin: 10px 10px 0 0;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+  border-radius: 20px;
+  border: 1px solid black;
 }

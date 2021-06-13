@@ -1,10 +1,13 @@
 import {
   OPEN_SERVICE_MODAL,
   CLOSE_SERVICE_MODAL,
+  OPEN_LOGIN_MODAL,
+  CLOSE_LOGIN_MODAL,
 } from '../actions/servicesActions';
 
 const initialState = {
   serviceModalOpen: false,
+  servicesLoginModal: false,
   services: [
     {
       image: 'https://cdn.worldvectorlogo.com/logos/miro-2.svg',
@@ -51,16 +54,37 @@ function openServiceModal(state, action) {
   return { ...state, serviceModalOpen: true, currentService: action.payload };
 }
 
-function closeServiceModal(state, action) {
-  return { ...state, serviceModalOpen: true, currentService: action.payload };
+function closeServiceModal(state) {
+  return { ...state, serviceModalOpen: false, currentService: null };
+}
+
+function servicesLoginPopupOpen(state, action) {
+  console.log(action.payload);
+  return {
+    ...state,
+    servicesLoginModal: true,
+  };
+}
+
+function servicesLoginPopupClose(state) {
+  return { ...state, servicesLoginModal: false };
 }
 
 const servicesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case OPEN_SERVICE_MODAL:
+    case OPEN_SERVICE_MODAL: {
       return openServiceModal(state, action);
-    case CLOSE_SERVICE_MODAL:
+    }
+
+    case CLOSE_SERVICE_MODAL: {
       return closeServiceModal(state, action);
+    }
+    case OPEN_LOGIN_MODAL: {
+      return servicesLoginPopupOpen(state, action);
+    }
+    case CLOSE_LOGIN_MODAL: {
+      return servicesLoginPopupClose(state, action);
+    }
     default:
       return state;
   }

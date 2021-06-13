@@ -1,21 +1,22 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import './modal-overlay.css';
-import { useSelector } from 'react-redux';
+
 import classNames from 'classnames';
 
 const modalRoot = document.getElementById('react-modals');
-function PopupOverlay({ children }) {
-  const { serviceModalOpen } = useSelector((state) => state.services);
-  console.log(serviceModalOpen);
+function PopupOverlay({ isOpen, children, handleOverlayClose }) {
   const popupClasses = classNames({
     popup: true,
-    popup_opened: serviceModalOpen && true,
+    popup_opened: isOpen,
   });
+
   return ReactDOM.createPortal(
     <div
       className={popupClasses}
-      // onClick={handleOverlayClose}
+      aria-hidden="true"
+      onKeyDown={handleOverlayClose}
+      onClick={handleOverlayClose}
     >
       {children}
     </div>,
