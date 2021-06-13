@@ -2,7 +2,7 @@ import React from 'react';
 import './home.scss';
 import Checkbox from '../components/checkbox/Checkbox';
 import Search from '../components/search/Search';
-import AppList from '../components/app-list/AppList';
+import ServiceList from '../components/service-list/ServiceList';
 
 const Home = () => (
   <div className="home">
@@ -35,7 +35,7 @@ const Home = () => (
         Каталог сервисов и приложений
       </h1>
       <Search />
-      <AppList />
+      <ServiceList />
     </div>
   </div>
 );

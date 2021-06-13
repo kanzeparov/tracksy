@@ -1,15 +1,16 @@
-import styles from './modal.module.css';
+import './modal.css';
+import React from 'react';
 
-function Modal({ isClose, name, title, children }) {
+function Modal({ isClose, children }) {
   return (
-    <div className={styles.popup__container}>
-      <div className={styles.popup__header}>
-        <h2 className={styles.title}>{title}</h2>
+    <div className="popup__container">
+      <div className="popup__header">
         <button
-          className={styles.button}
+          aria-label="btn"
+          className="button"
           type="button"
           onClick={isClose}
-        ></button>
+        />
       </div>
       {children}
     </div>
