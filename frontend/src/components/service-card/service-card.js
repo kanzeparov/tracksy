@@ -15,7 +15,7 @@ function ServiceCard({ item }) {
   const description = item?.text.slice(0, decription_limit) + '...';
   console.log(item);
   return (
-    <li className="card">
+    <li key={item.id} className="card">
       <div className="card__header">
         <img className="card__image" src={item.image} alt="lgoo" />
         <span className="card__about">

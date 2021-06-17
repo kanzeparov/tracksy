@@ -12,6 +12,7 @@ import {
 } from './actions/servicesActions';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
+import SectionTitle from './components/section-title/section-title';
 // import Footer from './components/Footer/Footer';
 
 function App() {
@@ -47,14 +48,9 @@ function App() {
     <>
       <main className="app">
         <Header />
-        <div className="section-title">
-          <h1 className="home__title home__title_color_black">
-            Сервисы и приложения
-          </h1>
-        </div>
-
         <Switch>
           <Route exact path="/">
+            <SectionTitle title={'Сервисы и приложения'}/>
             <Home />
           </Route>
           <Route exact path="/calendar">
