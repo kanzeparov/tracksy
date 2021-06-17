@@ -1,7 +1,13 @@
-.services {
+.services__list {
   display: grid;
+  width: 100%;
+  max-width: 1320px;
   grid-gap: 20px;
   margin: 0;
   padding: 0;
-  grid-template-columns: repeat(3, 250px);
+  grid-template-columns: repeat(3, 405px);
+}
+
+.services__count{
+  margin: 0 0 10px 0;
 }

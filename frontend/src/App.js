@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import ModalOverlay from './components/popups/modal-overlay/modal-overlay';
+
 import Modal from './components/popups/modal/modal';
 import LoginPopup from './components/popups/login/login';
 import ApplicationDetails from './components/popups/applications-details/application-details';
@@ -8,8 +10,8 @@ import {
   CLOSE_SERVICE_MODAL,
   CLOSE_LOGIN_MODAL,
 } from './actions/servicesActions';
-// import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import Header from './components/Header/Header';
+import Home from './pages/Home';
 // import Footer from './components/Footer/Footer';
 
 function App() {
@@ -43,8 +45,16 @@ function App() {
 
   return (
     <>
-      {/* <Header /> */}
-      <Main />
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/calendar">
+          <p>2142412</p>
+        </Route>
+      </Switch>
+
       {/* <Footer /> */}
 
       <ModalOverlay

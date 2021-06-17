@@ -8,6 +8,7 @@ import {
 const initialState = {
   serviceModalOpen: false,
   servicesLoginModal: false,
+  isLoggedIn: false,
   services: [
     {
       image: 'https://cdn.worldvectorlogo.com/logos/miro-2.svg',
@@ -31,19 +32,50 @@ const initialState = {
         'https://www.simonevolpi.com/wp-content/uploads/2020/05/logo-zoom.png',
       title: 'Zoom',
       id: 2,
-      text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a `,
+      text: `Программный инструмент для управления проектами. Используется для формирования списка задач, отслеживания общего прогресса команды...
+      `,
+      person: {
+        name: 'Mark Petrov',
+        workAt: 'IT закупки',
+        avatar:
+          'https://backlightblog.com/images/2020/10/blur-photo-background-header-1160x710.jpg',
+        contacts: {
+          email: 'm.petrov@tracksy.com',
+          tel: '+7 (900) 777-77-77',
+        },
+      },
     },
     {
       image:
         'https://www.assaggiatricediviaggi.it/wp-content/uploads/2020/11/netflix-1020x600.png',
       title: 'Netflix',
-      text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a `,
+      text: `Платформа для совместной работы распределенных команд (в том числе при дистанционной работе отдельных сотрудников)`,
+      person: {
+        name: 'Mark Petrov',
+        workAt: 'IT закупки',
+        avatar:
+          'https://backlightblog.com/images/2020/10/blur-photo-background-header-1160x710.jpg',
+        contacts: {
+          email: 'm.petrov@tracksy.com',
+          tel: '+7 (900) 777-77-77',
+        },
+      },
     },
     {
       image:
         'https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png',
       title: 'Notion',
-      text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a `,
+      text: `Платформа для совместной работы распределенных команд (в том числе при дистанционной работе отдельных сотрудников`,
+      person: {
+        name: 'Mark Petrov',
+        workAt: 'IT закупки',
+        avatar:
+          'https://backlightblog.com/images/2020/10/blur-photo-background-header-1160x710.jpg',
+        contacts: {
+          email: 'm.petrov@tracksy.com',
+          tel: '+7 (900) 777-77-77',
+        },
+      },
     },
   ],
   currentService: null,

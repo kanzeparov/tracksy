@@ -1,9 +1,11 @@
 .home {
   display: flex;
+  max-width: 1440px;
+  justify-content: flex-start;
+  padding-left: 60px;
 }
 .home__navigation {
-  width: 15vw;
-  height: 100vh;
+
   margin-right: 60px;
   background-color: rgb(56, 151, 128);
   display: flex;
@@ -12,9 +14,6 @@
 .home__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 1300px;
-  height: 100vh;
 }
 .home__title {
   color: white;
