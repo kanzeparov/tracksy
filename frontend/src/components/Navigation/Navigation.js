@@ -32,7 +32,7 @@ const Navigation = () => {
         ) : (
           <>
             <li className="nav__list-bell">
-              <img src={bell} alt="bell" />
+              <img className="bell" src={bell} alt="bell" />
             </li>
             <li onClick={openLoginPopup} className="nav__list-logo">
               <NavLink   activeClassName="nav__link_active" exact to="/" />

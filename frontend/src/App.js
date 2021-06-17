@@ -47,6 +47,12 @@ function App() {
     <>
       <main className="app">
         <Header />
+        <div className="section-title">
+          <h1 className="home__title home__title_color_black">
+            Сервисы и приложения
+          </h1>
+        </div>
+
         <Switch>
           <Route exact path="/">
             <Home />
