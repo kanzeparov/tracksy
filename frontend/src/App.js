@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import ModalOverlay from './components/popups/modal-overlay/modal-overlay';
-
+import './app.css';
 import Modal from './components/popups/modal/modal';
 import LoginPopup from './components/popups/login/login';
 import ApplicationDetails from './components/popups/applications-details/application-details';
@@ -45,15 +45,17 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/calendar">
-          <p>2142412</p>
-        </Route>
-      </Switch>
+      <main className="app">
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/calendar">
+            <p>2142412</p>
+          </Route>
+        </Switch>
+      </main>
 
       {/* <Footer /> */}
 

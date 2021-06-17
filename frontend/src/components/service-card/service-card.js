@@ -10,6 +10,9 @@ function ServiceCard({ item }) {
   function openServiceModal() {
     dispatch({ type: OPEN_SERVICE_MODAL, payload: item });
   }
+  let decription_limit = 112;
+
+  const description = item?.text.slice(0, decription_limit) + '...';
   console.log(item);
   return (
     <li className="card">
@@ -20,7 +23,7 @@ function ServiceCard({ item }) {
           <p className="card__category card-p-14-grey">#продуктивность</p>
         </span>
       </div>
-      <p className="card__text p-14-normal">{item.text}</p>
+      <p className="card__text p-14-normal">{description}</p>
       <div className="card__responsible">
         <p className="card__responsible-person card-p-14-grey-500">
           Ответственный
@@ -40,12 +43,12 @@ function ServiceCard({ item }) {
               <p className="card__responsible-person-name">IT-закупки</p>
             </div>
             <button
-            onClick={openServiceModal}
-            type="button"
-            className="card__button"
-          >
-            Подробнее
-          </button>
+              onClick={openServiceModal}
+              type="button"
+              className="card__button"
+            >
+              Подробнее
+            </button>
           </div>
         </div>
       </div>

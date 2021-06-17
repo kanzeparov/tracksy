@@ -36,7 +36,7 @@
   padding-left: 9px;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 35px;
 }
 
 .service-popup__person {
@@ -48,7 +48,8 @@
 }
 .paragraph {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 150%;
 }
 .paragraph_service_about {
   margin-bottom: 30px;
@@ -66,11 +67,11 @@
   color: black;
   text-align: center;
 }
-.responsability{
+.responsability {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
-.responsability__person-info{
+.responsability__person-info {
   display: flex;
 }
