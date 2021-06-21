@@ -1,0 +1,49 @@
+.home {
+  display: flex;
+  max-width: 1320px;
+  height: 100vh;
+  background-color: white;
+  justify-content: flex-start;
+  border-radius: 16px;
+}
+.home__navigation {
+
+  margin-right: 60px;
+  background-color: rgb(56, 151, 128);
+  display: flex;
+  justify-content: center;
+}
+.home__content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 35px 0 30px;
+}
+
+
+.home__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.home__list-item {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: rgb(241, 219, 219);
+}
+
+.button_type_login {
+  width: 250px;
+  height: 35px;
+  background: rgb(206, 191, 191);
+  margin: 10px 10px 0 0;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+  border-radius: 20px;
+  border: 1px solid black;
+}

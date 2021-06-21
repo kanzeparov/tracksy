@@ -1,10 +1,17 @@
 import React from 'react';
-import Section from '../shared/Section/Section';
+import './home.scss';
+import Search from '../components/search/Search';
+import ServiceList from '../components/service-list/ServiceList';
 
-const Home = () => (
-  <Section>
-    <h1>Home page</h1>
-  </Section>
-);
+const Home = () => {
+  return (
+    <div className="home">
+      <div className="home__content">
+        <Search />
+        <ServiceList />
+      </div>
+    </div>
+  );
+};
 
 export default Home;
