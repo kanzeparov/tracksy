@@ -9,12 +9,13 @@ import ApplicationDetails from './components/popups/applications-details/applica
 import {
   CLOSE_SERVICE_MODAL,
   CLOSE_LOGIN_MODAL,
+  GET_ALL_SERVICES
 } from './actions/servicesActions';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
 import SectionTitle from './components/section-title/section-title';
 // import Footer from './components/Footer/Footer';
-
+import getCards from "./utils/mock-fetch"
 function App() {
   const dispatch = useDispatch();
   const { serviceModalOpen, servicesLoginModal } = useSelector(
@@ -26,6 +27,8 @@ function App() {
   }
 
   useEffect(() => {
+    getCards().then(data => dispatch({type: GET_ALL_SERVICES, payload: data.subs}))
+
     const close = (e) => {
       if (e.keyCode === 27) {
         closeAllPopups();

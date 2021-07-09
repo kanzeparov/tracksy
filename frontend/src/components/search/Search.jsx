@@ -5,9 +5,9 @@ import './search.scss';
 
 function Search() {
   const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' }
+    { value: 'Продуктивность', label: 'Продуктивность' },
+    { value: 'Продуктивность', label: 'Продуктивность' },
+    { value: 'Продуктивность', label: 'Продуктивность' }
   ]
   return (
     <>

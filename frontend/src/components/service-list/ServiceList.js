@@ -10,7 +10,7 @@ function ServiceList() {
     <section className="services">
       <p className="services__count">27 приложений</p>
       <ul className="services__list">
-        {services.map((item) => (
+        {services?.map((item) => (
           <ServiceCard key={item.id} item={item} />
         ))}
       </ul>
