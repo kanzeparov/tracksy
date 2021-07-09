@@ -1,0 +1,14 @@
+.services__list {
+  display: grid;
+  width: 100%;
+  max-width: 1255px;
+  background-color: white;
+  justify-content: center;
+  grid-gap: 17px 20px;
+  padding: 0;
+  grid-template-columns: repeat(3, 405px);
+}
+
+.services__count{
+  margin: 0 0 10px 0px;
+}

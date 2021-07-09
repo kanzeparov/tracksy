@@ -1,0 +1,91 @@
+.card-p-14-black {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+}
+.card-p-14-grey {
+  font-style: normal;
+  font-weight: normal;
+  color: #aeaeae;
+  font-size: 14px;
+  line-height: 16px;
+}
+.card-p-14-grey-500 {
+  color: #aeaeae;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+}
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  width: 405px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.card__title {
+  margin: 0 0 5px 0;
+}
+.card__category {
+  margin: 0;
+}
+.card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.card__text {
+  margin: 0 0 15px 0;
+}
+.card__responsible {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__responsible-person{
+  margin: 0 0 10px;
+}
+.card__responsible-contacts {
+  display: flex;
+  align-items: center;
+}
+.card__responsible-person-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.card__responsible-person-name {
+  margin: 0;
+}
+.card__category {
+  margin: 0;
+}
+.card__image {
+  width: 50px;
+  height: 50px;
+  margin: 0 8px 0 0;
+}
+.person {
+  max-width: 150px;
+  height: 39px;
+  align-self: center;
+}
+.card__button {
+  width: 113px;
+  color: red;
+  background-color: transparent;
+  border: 1px solid #eb392c;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 50px;
+}

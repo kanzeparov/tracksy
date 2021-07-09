@@ -1,0 +1,14 @@
+.background_color_transperent {
+  background-color: transparent;
+}
+.color_red {
+  color: red;
+  border: 1px solid #eb392c;
+}
+
+.m_size {
+  width: 113px;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 5px;
+}

@@ -1,6 +1,7 @@
 .nav {
   &__list {
     list-style: none;
+    width: 84px;
     padding: 0;
     margin: 0;
     display: flex;
@@ -12,8 +13,28 @@
   &__link {
     color: #fff;
     text-decoration: none;
+
     &_active {
       text-decoration: underline;
     }
   }
+}
+.nav__list-bell {
+  cursor: pointer;
+}
+.nav__list-logo {
+  width: 30px;
+  height: 30px;
+  background-image: url('../../assets/images/avatar-test.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.nav__list-bell {
+  width: 24px;
+  height: 24px;
+  margin-right: 30px;
+}
+.bell {
+  width: 24px;
+  height: 24px;
 }

@@ -1,0 +1,26 @@
+{
+  "subs": [
+    {
+      "name": "Notion",
+      "category": "продуктивность",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg",
+      "description": "Платформа для совместной работы распределенных команд (в том числе при дистанционной работе отдельных сотрудников",
+      "people": "Mark Petrov",
+      "peopleImg": "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg",
+      "peopleSphere": "IT-закупки",
+      "peopleEmail": "m.petrov@tracksy.com",
+      "peoplePhone": "+7 (900) 777-77-77"
+    },
+    {
+      "name": "Notion",
+      "category": "продуктивность",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg",
+      "description": "Платформа для совместной работы распределенных команд (в том числе при дистанционной работе отдельных сотрудников",
+      "people": "Mark Petrov",
+      "peopleImg": "https://upload.wikimedia.org/wikipedia/commons/3/3c/IMG_logo_%282017%29.svg",
+      "peopleSphere": "IT-закупки",
+      "peopleEmail": "m.petrov@tracksy.com",
+      "peoplePhone": "+7 (900) 777-77-77"
+    }
+  ]
+}
